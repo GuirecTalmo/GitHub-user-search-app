@@ -1,0 +1,104 @@
+.nav {
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  height: 75px;
+  margin-bottom: 15px;
+}
+
+.container-logo {
+
+  display: flex;
+  align-items: center;
+  
+}
+
+.logo {
+
+  font-family: 'Inconsolata', monospace;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+.darkmode {
+
+  margin-right: 5px;
+
+}
+
+.switcher_container {
+
+  display: flex;
+  align-items: center;
+  
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 27px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1f2a48;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 4px;
+  bottom: 4px;
+  background-color: hsl(230, 17%, 14%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: hsl(0, 0%, 88%);
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.top_side {
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}

@@ -1,0 +1,111 @@
+.card {
+  display: flex;
+  background-color: #1f2a48;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 25px;
+}
+
+img {
+
+  max-width: 75px;
+  border-radius: 40px;
+}
+
+.column_avatar {
+
+  padding: 15px;
+  padding-right: 30px;
+  box-sizing: content-box;
+
+}
+
+.first-container {
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.user-header {
+
+  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+ h2 {
+
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+p {
+
+  font-size: 0.9em;
+  color: #8d95ac;
+  font-weight: 500;
+
+}
+
+.username {
+
+  color: #265ca3;
+  width: 100%;
+  margin-top: 10px;
+
+}
+
+.biographie {
+
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.second-container {
+
+  background-color: #141c2f;
+  border-radius: 10px;
+  padding: 15px;
+  width: 95%;
+  display: flex;
+}
+
+.little-column {
+
+  width: 30%;
+}
+
+.number {
+
+  font-size: 1.3em;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.third-container {
+
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.little-xs-column {
+
+  width: 50%;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.icons-card {
+
+  max-width: 1em;
+  margin-right: 10px;
+
+}
