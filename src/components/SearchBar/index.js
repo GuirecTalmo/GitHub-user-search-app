@@ -1,6 +1,9 @@
 import "./styles.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function SearchBar() {
+
   return (
     <form className="search">
       <svg
@@ -27,5 +30,6 @@ function SearchBar() {
     </form>
   );
 }
+
 
 export default SearchBar;

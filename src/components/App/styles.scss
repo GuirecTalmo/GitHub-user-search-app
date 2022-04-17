@@ -2,6 +2,23 @@
 .app {
 
   display: block;
-  width: 600px;
+  max-width: 600px;
   margin: auto;
 }
+
+
+@media (max-width: 720px) { 
+
+  .app {
+
+    display: block;
+    max-width: 90%;
+    margin: auto;
+  }
+
+
+}
+
+
+
+
