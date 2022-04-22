@@ -6,6 +6,7 @@ import organisation from "src/components/Card/icon-company.svg";
 
 function Informations() {
 
+
   return (
     <div>
       <div className="profile-header">

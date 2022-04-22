@@ -1,21 +1,32 @@
+@import '../../styles/index.scss';
 
 .app {
 
   display: block;
   max-width: 600px;
   margin: auto;
+  color: #fff;
+
+  @media (max-width: $desktop_width) { 
+
+      display: block;
+      max-width: 90%;
+      margin: auto;
+
+  }
 }
 
+h2 {
 
-@media (max-width: 720px) { 
+  font-size: 1.4em;
+  font-weight: 600;
+}
 
-  .app {
+p {
 
-    display: block;
-    max-width: 90%;
-    margin: auto;
-  }
-
+  font-size: 0.9em;
+  color: #8d95ac;
+  font-weight: 500;
 
 }
 

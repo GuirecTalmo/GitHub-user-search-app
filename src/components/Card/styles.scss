@@ -1,9 +1,20 @@
+@import '../../styles/index.scss';
+
 .card {
+  display: block;
+  background-color: #1f2a48;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 25px;
+  flex-wrap: wrap;
+}
+
+.cardMessage {
   display: flex;
   background-color: #1f2a48;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 25px;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .profile-header {
@@ -40,20 +51,6 @@ img {
 .bio {
 
   margin-bottom: 20px;
-}
-
- h2 {
-
-  font-size: 1.4em;
-  font-weight: 600;
-}
-
-p {
-
-  font-size: 0.9em;
-  color: #8d95ac;
-  font-weight: 500;
-
 }
 
 .username {
@@ -100,6 +97,17 @@ p {
   flex-wrap: wrap;
   margin-top: 10px;
   margin-bottom: 20px;
+
+  @media (max-width: $desktop_width) { 
+
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      width: 100%;
+      flex-direction: column;
+
+}
 }
 
 .little-xs-column {
@@ -122,24 +130,12 @@ p {
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $desktop_width) { 
+    
+      width: 100%;
+      display: block;
+    
+    }
 }
 
-@media (max-width: 720px) { 
-
-  .third-container {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    width: 100%;
-    flex-direction: column;
-}
-
-.profile-info-wrapper {
-
-  width: 100%;
-  display: block;
-
-}
-
-}
