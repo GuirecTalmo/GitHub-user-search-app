@@ -1,8 +1,11 @@
 import './styles.scss';
-import React from 'react';
+import React, {useContext} from 'react';
+import { DarkModeContest } from '../../context';
 import PropTypes from 'prop-types';
 
+
 function SearchBar({ username, setUsername, getAllDatas, }) {
+  const { darkMode, toggleDarkMode } = useContext(DarkModeContest);
   const handleChange = (event) => {
     setUsername(event.target.value);
   };
@@ -13,7 +16,7 @@ function SearchBar({ username, setUsername, getAllDatas, }) {
   };
 
   return (
-    <form className="search" onSubmit={handleSubmit}>
+    <form className={darkMode ? `search theme--dark` : `search theme--light`} onSubmit={handleSubmit}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-6 w-6 icon-search"
@@ -29,18 +32,16 @@ function SearchBar({ username, setUsername, getAllDatas, }) {
         />
       </svg>
       <input
-        className="inputSearch"
+        className={darkMode ? `inputSearch header--dark` : `inputSearch header--light`}
         type="text"
         name="search"
         placeholder="Search Github username..."
         onChange={handleChange}
         value={username}
       />
-      <button type="submit">Search</button>
+      <button className={darkMode ? `button--dark` : `button--light`} type="submit">Search</button>
     </form>
   );
 }
-
-
 
 export default SearchBar;

@@ -1,28 +1,30 @@
 import './styles.scss';
 import PropTypes from 'prop-types';
+import React, {useContext} from 'react';
+import { DarkModeContest } from '../../context';
 import location from 'src/components/Card/icon-location.svg';
 import twitter from 'src/components/Card/icon-twitter.svg';
 import personnal from 'src/components/Card/icon-website.svg';
 import organisation from 'src/components/Card/icon-company.svg';
 
 function Card({ ListOfDatas, }) {
-
+  const { darkMode } = useContext(DarkModeContest);
   const date = new Date(ListOfDatas.created_at)
-const formattedDate = date.toLocaleDateString("en-GB", {
-  day: "numeric",
-  month: "long",
-  year: "numeric"
-})
+  const formattedDate = date.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  })
 
   return (
-    <div className="card">
+    <div className={darkMode ? `card theme--dark` : `card theme--light`}>
       <div>
         <div className="profile-header">
           <div className="container-avatar">
             <img
               id="avatar"
               src={ListOfDatas.avatar_url}
-              alt=""
+              alt="avatar user"
             />
           </div>
           <div className="profile-info-wrapper">
@@ -36,10 +38,10 @@ const formattedDate = date.toLocaleDateString("en-GB", {
           </div>
         </div>
         <div className="first-container">
-          <p id="bio" className="bio">
-            {ListOfDatas.bio}
+          <p id="bio" className="biographie">
+          {ListOfDatas.bio === null ? 'Bio Not Available' : ListOfDatas.bio}
           </p>
-          <div className="second-container">
+          <div className={darkMode ? `second-container table--dark` : `second-container table--light`}>
             <div className="little-column">
               <p>Repos</p>
               <p className="number">{ListOfDatas.public_repos}</p>
@@ -54,21 +56,21 @@ const formattedDate = date.toLocaleDateString("en-GB", {
             </div>
           </div>
           <div className="third-container">
-            <div className="little-xs-column">
-              <img className="icons-card" src={location} alt="location" />
-              <p>{ListOfDatas.location}</p>
+            <div className="little-xs-column marge">
+              <img className={darkMode ? `icons-card svg--dark` : `icons-card svg--light`} src={location} alt="location" />
+              <p>{ListOfDatas.location === null ? 'Not Available' : ListOfDatas.location}</p>
             </div>
             <div className="little-xs-column">
-              <img className="icons-card" src={twitter} alt="twitter" />
-              <p>@{ListOfDatas.twitter_username}</p>
+              <img className={darkMode ? `icons-card svg--dark` : `icons-card svg--light`} src={twitter} alt="twitter" />
+              <p>{ListOfDatas.twitter_username === null ? 'Not Available' : `@${ListOfDatas.twitter_username}`}</p>
+            </div>
+            <div className="little-xs-column marge">
+              <img className={darkMode ? `icons-card svg--dark` : `icons-card svg--light`} src={personnal} alt="personnal" />
+              <p>{ListOfDatas.html_url === null ? 'Not Available' : ListOfDatas.html_url}</p>
             </div>
             <div className="little-xs-column">
-              <img className="icons-card" src={personnal} alt="personnal" />
-              <p><a href={ListOfDatas.html_url}>Personnal website</a></p>
-            </div>
-            <div className="little-xs-column">
-              <img className="icons-card" src={organisation} alt="orga" />
-              <p>{ListOfDatas.company}</p>
+              <img className={darkMode ? `icons-card svg--dark` : `icons-card svg--light`} src={organisation} alt="orga" />
+              <p>{ListOfDatas.company === null ? 'Not Available' : ListOfDatas.company}</p>
             </div>
           </div>
         </div>

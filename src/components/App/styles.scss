@@ -1,11 +1,17 @@
 @import '../../styles/index.scss';
 
+.main {
+
+  min-width: 100%;
+  min-height: 100vh;
+
+}
+
 .app {
 
   display: block;
   max-width: 600px;
   margin: auto;
-  color: #fff;
 
   @media (max-width: $desktop_width) { 
 
@@ -25,7 +31,6 @@ h2 {
 p {
 
   font-size: 0.9em;
-  color: #8d95ac;
   font-weight: 500;
 
 }

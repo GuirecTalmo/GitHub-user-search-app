@@ -2,7 +2,6 @@
 
 .card {
   display: block;
-  background-color: #1f2a48;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 25px;
   flex-wrap: wrap;
@@ -10,7 +9,6 @@
 
 .cardMessage {
   display: flex;
-  background-color: #1f2a48;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 25px;
   flex-wrap: wrap;
@@ -21,14 +19,35 @@
 
   width: 100%;
   display: flex;
-  margin-bottom: 30px;
+  justify-content: space-between;
+
+  @media (max-width: $desktop_width) { 
+
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+
+}
+}
+
+.container-avatar {
+
+  display: flex;
 }
 
 img {
 
-  max-width: 75px;
+  max-width: 110px;
   border-radius: 90px;
   margin-right: 15px;
+
+  @media (max-width: $desktop_width) { 
+
+    max-width: 75px;
+    border-radius: 90px;
+    margin-right: 15px;
+
+}
 }
 
 
@@ -37,6 +56,16 @@ img {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: flex-end;
+
+  @media (max-width: $desktop_width) { 
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+
+}
 }
 
 .user-header {
@@ -63,40 +92,62 @@ img {
 
 .biographie {
 
-  width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
+  width: 425px;
+
+  @media (max-width: $desktop_width) { 
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+
+}
 }
 
 .second-container {
 
-  background-color: #141c2f;
   border-radius: 10px;
   padding: 15px;
-  width: 95%;
+  width: 425px;
   display: flex;
+
+  @media (max-width: $desktop_width) { 
+
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+
+}
 }
 
 .little-column {
 
-  width: 30%;
+  width: 34%;
+
+  @media (max-width: $desktop_width) { 
+
+    width: 32%;
+    text-align: center;
+}
 }
 
 .number {
 
   font-size: 1.3em;
-  color: #fff;
   font-weight: 600;
   margin-top: 5px;
 }
 
 .third-container {
 
-  width: 100%;
+  width: 425px;
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
   margin-bottom: 20px;
+  justify-content: space-between;
 
   @media (max-width: $desktop_width) { 
 
@@ -112,7 +163,7 @@ img {
 
 .little-xs-column {
 
-  width: 50%;
+  width: 35%;
   display: flex;
   align-items: center;
   margin-top: 15px;
@@ -122,12 +173,11 @@ img {
 
   max-width: 1em;
   margin-right: 10px;
-
 }
 
 .profile-info-wrapper {
 
-  width: 100%;
+  width: 425px;
   display: flex;
   justify-content: space-between;
 
@@ -139,3 +189,10 @@ img {
     }
 }
 
+.CardMessage {
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 25px;
+  flex-wrap: wrap;
+  text-align: center;
+}
