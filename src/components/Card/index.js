@@ -66,7 +66,7 @@ function Card({ ListOfDatas, }) {
             </div>
             <div className="little-xs-column marge">
               <img className={darkMode ? `icons-card svg--dark` : `icons-card svg--light`} src={personnal} alt="personnal" />
-              <p>{ListOfDatas.html_url === null ? 'Not Available' : ListOfDatas.html_url}</p>
+              <p>{ListOfDatas.blog === "" ? 'Not Available' : ListOfDatas.blog}</p>
             </div>
             <div className="little-xs-column">
               <img className={darkMode ? `icons-card svg--dark` : `icons-card svg--light`} src={organisation} alt="orga" />

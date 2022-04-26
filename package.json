@@ -6,8 +6,11 @@
     "lint": "eslint ./src/** --no-error-on-unmatched-pattern",
     "lint:fix": "eslint --fix ./src/** --no-error-on-unmatched-pattern",
     "clean": "rm -rf dist",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -b master -d dist",
     "clean:all": "rm -rf dist node_modules yarn.lock package-lock.json"
   },
+  "homepage": "https://guirectalmo.github.io/GitHub-user-search-app/",
   "devDependencies": {
     "@babel/core": "^7.17.7",
     "@babel/eslint-parser": "^7.17.0",
@@ -48,14 +51,10 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "@heroicons/react": "^1.0.6",
     "axios": "^0.26.1",
+    "gh-pages": "^3.2.3",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-redux": "^8.0.0",
-    "redux": "^4.1.2",
-    "redux-devtools-extension": "^2.13.9",
-    "redux-thunk": "^2.4.1"
+    "react-dom": "^17.0.2"
   }
 }
