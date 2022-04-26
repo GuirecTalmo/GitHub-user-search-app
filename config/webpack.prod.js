@@ -63,7 +63,7 @@ module.exports = merge(common, {
   },
 
   optimization: {
-    minimizer: [/*new TerserJSPlugin({}), */new CssMinimizerPlugin()],
+    minimizer: [new TerserJSPlugin({}), new CssMinimizerPlugin()],
     runtimeChunk: 'single',
     splitChunks: {
       chunks: 'all',
